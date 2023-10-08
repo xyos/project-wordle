@@ -18,7 +18,7 @@ function Game() {
 
   const handleGuess = (event) => {
     event.preventDefault();
-    if (guess.length <= NUM_OF_GUESSES_ALLOWED) {
+    if (guesses.length <= NUM_OF_GUESSES_ALLOWED) {
       setGuesses([...guesses, guess]);
       setGuess("");
     }
