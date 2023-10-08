@@ -10,9 +10,18 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
+  const [guesses, setGuesses] = React.useState([]);
+  const [guess, setGuess] = React.useState("");
+
+  const handleGuess = (event) => {
+    event.preventDefault();
+    setGuesses([...guesses, guess]);
+    setGuess("");
+  };
+
   return (
     <>
-      <GuessInput />
+      <GuessInput guess={guess} handleGuess={handleGuess} setGuess={setGuess} />
     </>
   );
 }
