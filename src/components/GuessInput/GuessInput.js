@@ -12,6 +12,7 @@ function GuessInput({ guess, handleGuess, setGuess }) {
         autoComplete="off"
         maxLength={5}
         pattern="[A-Za-z]{5}"
+        title="Must be 5 letters word"
         value={guess}
         onChange={(event) => setGuess(event.target.value.toUpperCase())}
         id="guess-input"
